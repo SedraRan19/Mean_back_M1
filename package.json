@@ -1,0 +1,33 @@
+{
+  "name": "m1p11mean-morgan-sedra-back",
+  "version": "1.0.0",
+  "description": "Application MEAN de salon de beauté (Morgan et Sedra) - BACK",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "nodemailer": "^6.9.10",
+    "passport": "*",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morgan5/m1p11mean-Morgan-Sedra-back.git"
+  },
+  "author": "Morgan et Sedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Morgan5/m1p11mean-Morgan-Sedra-back/issues"
+  },
+  "homepage": "https://github.com/Morgan5/m1p11mean-Morgan-Sedra-back#readme"
+}

@@ -1,0 +1,108 @@
+// CLIENT
+{
+  "_id": ObjectId("client1"),
+  "firstName": "Alice",
+  "lastName": "Dupont",
+  "email": "alice.dupont@example.com",
+  "password": "hashedPassword",
+  "appointmentHistory": [
+    {
+      "appointmentId": ObjectId("appointment1"),
+      "appointmentDate": ISODate("2024-02-06T10:00:00Z"),
+      "status": "Confirmed"
+    }
+  ],
+  "preferences": {
+    "preferredService": ObjectId("service1"),
+    "preferredEmployee": ObjectId("employee1")
+  },
+  "authorizedSpecialOffers": [
+    ObjectId("specialOffer1")
+  ]
+}
+
+//EMPLOYER
+{
+    "_id": ObjectId("employee1"),
+    "firstName": "Jean",
+    "lastName": "Martin",
+    "email": "jean.martin@example.com",
+    "password": "hashedPassword",
+    "workSchedule": [
+      {
+        "day": "Monday",
+        "startTime": "09:00",
+        "endTime": "18:00"
+      },
+      // ... other days
+    ],
+    "tasksCompleted": [
+      {
+        "date": ISODate("2024-02-06"),
+        "commissionAmount": 20
+      }
+    ]
+}
+  
+
+//SERVICE
+{
+    "_id": ObjectId("service1"),
+    "name": "Manicure",
+    "price": 30,
+    "duration": 60,
+    "commissionPercentage": 15
+}
+  
+
+// RDV
+{
+    "_id": ObjectId("appointment1"),
+    "clientId": ObjectId("client1"),
+    "employeeId": ObjectId("employee1"),
+    "requestedServices": [
+      {
+        "serviceId": ObjectId("service1"),
+        "selectedEmployee": ObjectId("employee1")
+      }
+    ],
+    "appointmentDate": ISODate("2024-02-06T10:00:00Z"),
+    "status": "Confirmed"
+}
+  
+
+//STAT
+{
+    "_id": ObjectId("statistics1"),
+    "averageWorkTimePerEmployee": [
+      {
+        "employeeId": ObjectId("employee1"),
+        "averageTime": 8.5
+      }
+    ],
+    "appointmentsPerDayMonth": [
+      {
+        "date": ISODate("2024-02-06"),
+        "numberOfAppointments": 1
+      }
+    ],
+    "revenuePerDayMonth": [
+      {
+        "date": ISODate("2024-02-06"),
+        "amount": 30
+      }
+    ],
+    "profitPerMonth": [
+      {
+        "month": "February",
+        "expenses": {
+          "salary": 5000,
+          "rent": 1000,
+          "purchase": 500,
+          "otherExpenses": 300
+        },
+        "netProfit": 21900
+      }
+    ]
+}
+  
